@@ -1,18 +1,13 @@
 require "company"
-
-class Employee < Company
-  
+class Employee < Company  
    @@employee = []
   def self.add_employee(new_employee)
     @@employee<<new_employee
   end
-  def add_employees=(y)
+  def <<(y)
      @@employee << y
-    end 
-    
+    end     
   def employee
     @@employee
-  end
-  
+  end  
 end
-obj = Employee.new

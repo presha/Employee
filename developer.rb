@@ -4,15 +4,13 @@ class Developer < Employee
      @@developers=[]
   def initialize(name)
     Employee.add_employee(name)
-      @@developers<<name
-      
-  end
-  
+      @@developers<<name      
+  end  
   def self.add_employee(developer)
       Employee.add_employee(developer)
      @@developers<<developer    
   end
-  def add_employees=(y)
+  def <<(y)
     super
      @@developers << y
     end
